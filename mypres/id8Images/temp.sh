@@ -1,0 +1,13 @@
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.37.33\ PM.png flow1.png
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.41.48\ PM.png flow2.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.45.22\ PM.png flow3.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.47.16\ PM.png flow4.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.48.25\ PM.png flow5.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.48.35\ PM.png flow6.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.48.57\ PM.png flow7.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.49.54\ PM.png flow8.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.50.03\ PM.png flow9.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 10.59.47\ PM.png flow10.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 11.00.24\ PM.png flow11.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 11.02.23\ PM.png flow12.png 
+mv bkp/Screen\ shot\ 2012-09-06\ at\ 11.02.45\ PM.png flow13.png 

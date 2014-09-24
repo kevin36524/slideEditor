@@ -1,0 +1,32 @@
+#toolbar {
+   display: none;
+   position: absolute;
+   background-color: #404040;
+   border-radius: 15px;
+   top: 20px;
+   left: 20px;
+   cursor: move;
+}
+
+#toolbar button {
+   float: left;
+   margin: 7px;
+}
+
+.codeDialog {
+   position: absolute;
+   display: block;
+   background-color: #404040;
+   border-radius: 15px;
+   top: 20px;
+   left: 20px;
+   cursor: move;
+}
+
+.drop {
+ display: none;
+}
+
+.reveal.overview .slides section[draggable="true"] {
+  cursor: move;
+}

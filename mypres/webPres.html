@@ -1,0 +1,392 @@
+
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <!-- native Generic stuff -->
+        <meta charset="utf-8">
+        <title>HTML5 Presentations</title>
+        <meta name="description" content="HTML 5 Presentations on the Cloud">
+        <meta name="author" content="Kevin Patel">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'
+        rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/theme/default.css">
+		<style type='text/css'>
+		.reveal .slides section .fragment.visible.animate{
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+            opacity: 1;
+            color: #1EC7E6;
+			transition-duration: 1s,1s,1s,1s,1s,1s;
+            -webkit-transition: all 3s;
+			-moz-transition-duration: 1s,1s,1s,1s,1s,1s;
+			-o-transition-duration: 1s,1s,1s,1s,1s,1s;
+		}
+
+
+		.reveal .slides section .fragment.newsFlash {
+			color: orange;
+	    }
+		.reveal .slides section .fragment.visible.newsFlash{
+		    -webkit-animation:animated_div 3s 1;
+        }
+		@-webkit-keyframes animated_div
+		{
+			  0%		{color: white;}
+			  25%		{color: orange;}
+			  50%		{color: white;}
+			  60%		{color: orange;}
+			  70%		{color: white;}
+			  85%		{color: orange;}
+			  90%		{color: white;}
+			  100%		{color: orange;}
+		}
+		</style>
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write('<link rel="stylesheet" href="../css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+        <!-- generic stuff ends -->
+		<!-- YUI JS -->
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/yui-base/yui-base-min.js&3.6.0/build/oop/oop-min.js&3.6.0/build/event-custom-base/event-custom-base-min.js&3.6.0/build/features/features-min.js&3.6.0/build/dom-core/dom-core-min.js&3.6.0/build/dom-base/dom-base-min.js&3.6.0/build/selector-native/selector-native-min.js&3.6.0/build/selector/selector-min.js&3.6.0/build/node-core/node-core-min.js&3.6.0/build/node-base/node-base-min.js&3.6.0/build/event-base/event-base-min.js&3.6.0/build/attribute-core/attribute-core-min.js&3.6.0/build/event-custom-complex/event-custom-complex-min.js&3.6.0/build/attribute-events/attribute-events-min.js&3.6.0/build/attribute-extras/attribute-extras-min.js&3.6.0/build/attribute-base/attribute-base-min.js&3.6.0/build/attribute-complex/attribute-complex-min.js&3.6.0/build/base-core/base-core-min.js&3.6.0/build/base-base/base-base-min.js&3.6.0/build/pluginhost-base/pluginhost-base-min.js&3.6.0/build/pluginhost-config/pluginhost-config-min.js&3.6.0/build/base-pluginhost/base-pluginhost-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/classnamemanager/classnamemanager-min.js&3.6.0/build/event-synthetic/event-synthetic-min.js&3.6.0/build/event-focus/event-focus-min.js&3.6.0/build/dom-style/dom-style-min.js&3.6.0/build/node-style/node-style-min.js&3.6.0/build/widget-base/widget-base-min.js&3.6.0/build/widget-htmlparser/widget-htmlparser-min.js&3.6.0/build/widget-skin/widget-skin-min.js&3.6.0/build/event-delegate/event-delegate-min.js&3.6.0/build/node-event-delegate/node-event-delegate-min.js&3.6.0/build/widget-uievents/widget-uievents-min.js&3.6.0/build/base-build/base-build-min.js&3.6.0/build/event-key/event-key-min.js&3.6.0/build/event-outside/event-outside-min.js&3.6.0/build/widget-autohide/widget-autohide-min.js&3.6.0/build/button-core/button-core-min.js&3.6.0/build/node-pluginhost/node-pluginhost-min.js&3.6.0/build/button-plugin/button-plugin-min.js&3.6.0/build/widget-stdmod/widget-stdmod-min.js&3.6.0/build/widget-buttons/widget-buttons-min.js&3.6.0/build/widget-modality/widget-modality-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/dom-screen/dom-screen-min.js&3.6.0/build/node-screen/node-screen-min.js&3.6.0/build/widget-position/widget-position-min.js&3.6.0/build/widget-position-align/widget-position-align-min.js&3.6.0/build/widget-position-constrain/widget-position-constrain-min.js&3.6.0/build/widget-stack/widget-stack-min.js&3.6.0/build/panel/panel-min.js&3.6.0/build/yui-throttle/yui-throttle-min.js&3.6.0/build/dd-ddm-base/dd-ddm-base-min.js&3.6.0/build/dd-drag/dd-drag-min.js&3.6.0/build/dd-plugin/dd-plugin-min.js&3.6.0/build/event-resize/event-resize-min.js&3.6.0/build/dd-ddm/dd-ddm-min.js&3.6.0/build/dd-ddm-drop/dd-ddm-drop-min.js&3.6.0/build/dd-drop/dd-drop-min.js&3.6.0/build/dd-drop-plugin/dd-drop-plugin-min.js"></script>
+        <!-- YUI JS ends -->
+		<!-- CodeMirror styles starts-->
+        <link rel='stylesheet' type='text/css' href='../plugin/editor/editor.css'></link>
+        <link rel="stylesheet" href="codemirror2/lib/codemirror.css">
+        <link rel="stylesheet" href="codemirror2/lib/slideEditor.css">
+        <link rel="stylesheet" href="codemirror2/theme/night.css">
+        <!-- Codemirror ends here -->
+        <script type="text/javascript">
+          		
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-34675689-1']);
+          _gaq.push(['_trackPageview']);
+          		
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();	
+          		
+        </script>
+    </head>
+    
+    <body>
+	<object id="pingboxcom68u8cuwg00" type="application/x-shockwave-flash" data="http://wgweb.msg.yahoo.com/badge/Pingbox.swf" width="240" height="420" style=" position: absolute; top: 3em; left: 0.3em; display: none; "><param name="movie" value="http://wgweb.msg.yahoo.com/badge/Pingbox.swf"><param name="allowScriptAccess" value="always"><param name="flashvars" value="wid=o9pq5SmwRnRdt1VHhNerFDJRD9I-"></object>
+        <div class='reveal'>
+            <div class='slides'>
+                <section>
+                     <h1>HTML5 Presentations On the Cloud</h1>
+
+                    <div>
+                        <br>
+                    </div>
+                    
+<h2>ID-8</h2>
+
+                    <div>USE ARROW KEYS TO NAVIGATE</div>
+                </section>
+                <section>
+                     <h2 style="color:blue; font-size:2.05em">WHAT ARE PRESENTATIONS ON THE CLOUD ?</h2> 
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="fragment">Make the Presentations on the web</li>
+                            <li class="fragment">Store the Presentations on the web</li>
+                            <li class="fragment">Present it on the Web</li>
+                        </ul>
+                        <div>
+                            <br>
+                        </div>
+                        <div class="fragment">So basically
+                            <br>"FOR the WEB" , "OF the WEB" &amp; "BY the WEB"</div>
+                    </div>
+                </section>
+                <section>
+                     <h2 style="color:blue; font-size:2.05em">
+  WHY TO KEEP SLIDES ON THE CLOUD?
+</h2> 
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="fragment">Easy Access - Just need the Web</li>
+                            <li class="fragment">No Data Loss</li>
+                            <li class="fragment">No Proprietary Software Dependancies</li>
+                            <li class="fragment">No Storage Problems</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                     <h2 style="color:blue; font-size:2.05em">
+  WHY HTML-5 BASED PRESENTATIONS?
+</h2> 
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="fragment">Tremendous Potential</li>
+                            <li class="fragment">Looks Awesome</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <br>
+                    </div>
+                    <div class="fragment">Our Next examples will convince you.</div>
+                    <div>
+                        <br>
+                    </div>
+                    <div class="fragment animate">WARNING: You may be blinded by over-exposure to PURE awesomeness!</div>
+                    <div
+                    class="fragment">JUST KIDDING :)</div>
+            </section>
+
+            <section data-state="customevent">
+               <h2> CodeMirror example </h2>
+                <div>Try editting the JS and see the Change in Output window.</div>
+				<br>
+<textarea id="ed3" >
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+       document.writeln('hello');
+    </script>
+  </body>
+</html>
+</textarea>
+
+               <iframe id="out3" src="" frameborder="no">
+               </iframe>
+
+               <script>
+               
+               </script>
+            </section>
+
+            <section>
+                <div>Drag the pendulums give some angular velocity  and see their motions</div>
+				<br>
+				<iframe frameborder="0" width="100%" height="560px" style="max-width: 725px; max-height:none; height:560px;" title="Double Pendulum Simulation!" src="http://studios.clockworkmagpie.com/cmsf/double_pendulum/index.min.html"><a href="http://studios.clockworkmagpie.com/content/double-pendulum">Click here to play with the double pendulum simulation!</a></iframe>
+            </section>
+            <section>
+                <div>Multimedia presentations</div>
+				<iframe width="640" style="height:550px; max-height:none" src="http://www.youtube.com/embed/gWxsZF_fNuc?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </section>
+            <section>
+                 <h3>Don't give a link to your site just show it :) </h3>
+                 <iframe style="max-height:none;height:500px;width:800px;" src="http://www.sony.com/"> </iframe>
+
+            </section>
+            <section>
+                 <h3> Embeed Web Widgets in the slides (eg: Pingbox) </h3>
+				 <br>
+
+                <ul>
+				    <li class='fragment'> Press <span style='color:#bad'>Alt+P</span> to show/hide pingBox.</li>
+					<div class='fragment'>
+                       <li>Consider using this ping box for Q &amp; A</li>
+                       <li>You will be anonymous</li>
+                       <li>No one else will know your question</li>
+                       <li>And the presenter will not be disturbed</li>
+					</div>
+                </ul>
+            </section>
+            <section>
+                <div style="font-size:2.0em; color:blue">Hmm...
+                    <br>
+                    <br>But can a layman make such<br> <br> presentations??</div>
+                <div>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <br>
+                    </div>
+                    <div>
+                        <br>
+                    </div>
+                    <div class='fragment newsFlash'>
+                        <p>Well this presentation is a slide Editor too !!!</p>
+                    </div>
+                    <div class='fragment'>
+                        <p>Read on to see how you can edit and create new presentations</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                 <h2> Slide Toolbar </h2>
+
+                <ul>
+                    <li>Press Alt+T to show or Hide the toolbar</li>
+                    <li>Toolbar is the starting point</li>
+                    <li>You can drag the toolbar</li>
+                    <li>The Toolbar consists of many features</li>
+                    <li>Go ahead and explore them or just read on</li>
+                </ul>
+            </section>
+            <section>
+                 <h2>Add or Delete Slide </h2>
+
+                <ul>
+                    <li>Press "Add Slide" button to add a New slide</li>
+                    <li>The newly added slide will have some dummy content</li>
+                    <li>Pressing Delete button will remove the current slide</li>
+                </ul>
+            </section>
+            <section>
+                 <h2>EDIT Slide</h2>
+
+                <ul>
+                    <li>"Edit Slide" button will make the focused slide editable</li>
+                    <li>Now, you can click anywhere on the slide and edit it.</li>
+                    <li>After editting press the "Save Slide" button.</li>
+                    <li>If you are an HTML fan then you are just in luck.</li>
+                    <li>You can use the "Raw Edit" button.</li>
+                    <li>Now you can write any HTML /CSS /JS code and it will be reflected in the
+                        slide.</li>
+                    <li>The Slide Editor can be dragged and to close it press done</li>
+                </ul>
+            </section>
+            <section>
+                 <h2> Drag and Drop Slides </h2>
+
+                <ul>
+                    <li>It is very easy to shuffle your slide ordering too.</li>
+                    <li>First press ESC key</li>
+                    <li>Now click on "Drag and Drop" button</li>
+                    <li>This will allow the slides to be dragged</li>
+                    <li>Feel free to drag and drop any slide anywhere</li>
+                </ul>
+            </section>
+            <section>
+                 <h2> Save the Presentation </h2>
+
+                <ul>
+                    <li>Currently we are not saving the presentation on our servers, because of
+                        copyright and server space restrictions. But it can be easily done.</li>
+                    <li>Instead we just give you the code.</li>
+                    <li>Just hit the "Show me the Code" button</li>
+                    <li>And get the code for your whole presentation</li>
+                </ul>
+            </section>
+            <section>
+                 <h2> CREDITS </h2>
+
+                <br>
+                <div>We would like to thank :-</div>
+                <br>
+                <ol>
+                    <li> <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js </a> for the underlying Presentation structure.</li>
+                    <li> <a href="http://codemirror.net"> CODEMIRROR</a> for providing rich inline HTML text editor.</li>
+                    <li>YUI for providing DOM manipulation and Drag and DROP.</li>
+                    <li> <a href="http://studios.clockworkmagpie.com/content/double-pendulum"> Clockwork MagPie Studios </a> for the pendulum examples </li>
+                    <li> <a href="http://codepen.io/neilcarpenter/pen/zFlay"> CODEPEN </a> for some of the HTML examples</li>
+                </ol>
+            </section>
+            <section>
+                 <h2> THATS ALL FOLKS !!!! </h2>
+
+                <br>
+                <iframe src="../mypres/neon.html" style="height:300px"></iframe>
+            </section>
+        </div>
+        <!-- The navigational controls UI -->
+        <!-- <aside class="controls">
+           <a class="left" href="#">&#x25C4;</a>
+           <a class="right" href="#">&#x25BA;</a>
+           <a class="up" href="#">&#x25B2;</a>
+           <a class="down" href="#">&#x25BC;</a>
+       </aside>
+       -->
+        <!-- Presentation progress bar -->
+        <div class="progress"><span></span>
+
+        </div>
+        </div>
+        <script src="../lib/js/head.min.js"></script>
+        <script src="../js/reveal.min.js"></script>
+
+        <!-- Codemirror starts here -->
+		<script src="codemirror2/lib/codemirror.js"></script>
+        <script src="codemirror2/lib/slideEditor.js"></script>
+        <script src="codemirror2/mode/javascript/javascript.js"></script>
+        <script src="codemirror2/mode/css/css.js"></script>
+        <script src="codemirror2/mode/xml/xml.js"></script>
+        <script src="codemirror2/mode/htmlmixed/htmlmixed.js"></script>
+		<script src='../plugin/editor/editor-main.js'> </script>
+		
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                mouseWheel: false,
+                progress: true,
+                history: true,
+
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+                // Optional libraries used to extend on reveal.js                
+                dependencies: [{
+                    src: '../lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                }]
+            });
+
+            Reveal.addEventListener( 'customevent', (function(){
+                var renderedOnce = false;
+                var retFn = function(){
+                  if (!renderedOnce){
+                    YUI().use('slideEditor','node', function(Y){
+                      Y.activateSlideEditor("#ed3", "#out3");
+                      Y.one('.CodeMirror-scrollbar').remove(); 
+                    });
+                    renderedOnce = true;
+                  }
+                };
+                return retFn;
+              })()
+            );
+
+			YUI().use('node',function(Y){
+			   var pingBoxNode = Y.one('#pingboxcom68u8cuwg00');
+			   var isPBHidden = true;
+			   var showOrHidePingBox = function(){
+			     if (isPBHidden) {
+				    pingBoxNode.setStyle('display','block');
+				 } else {
+				    pingBoxNode.setStyle('display','none');
+				 }
+				 isPBHidden = !isPBHidden;
+			   };
+
+			   Y.one('body').on('keydown', function(ev){
+			      if (ev.altKey && ev.button === 80 ){
+				     showOrHidePingBox();
+				  }
+			   });
+
+			   pingBoxNode.on('keydown',function(ev){ev.stopPropagation();});
+
+			});
+
+        </script>
+    </body>
+
+</html>

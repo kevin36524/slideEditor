@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- native Generic stuff -->
+  <meta charset="utf-8">
+  
+  <title>Test Presentation</title>
+  
+  <meta name="description" content="Just making a bare minimal presentation">
+  <meta name="author" content="Kevin Patel">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/theme/default.css">
+
+  <script>
+      // If the query includes 'print-pdf' we'll use the PDF print sheet
+      document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf':'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+  <!-- generic stuff ends -->
+
+  <script src="http://y.ahoo.it/3BxXM"></script>
+  <script src='../plugin/editor/editor-main.js'> </script>
+  <link rel='stylesheet' type='text/css' href='../plugin/editor/editor.css'> </link>
+
+  <!-- Codemirror starts here -->
+    <link rel="stylesheet" href="codemirror2/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror2/lib/slideEditor.css">
+    <link rel="stylesheet" href="codemirror2/theme/night.css">
+    <script src="codemirror2/lib/codemirror.js"></script>
+    <script src="codemirror2/lib/slideEditor.js"></script>
+    <script src="codemirror2/mode/javascript/javascript.js"></script>
+    <script src="codemirror2/mode/css/css.js"></script>
+    <script src="codemirror2/mode/xml/xml.js"></script>
+    <script src="codemirror2/mode/htmlmixed/htmlmixed.js"></script>
+  <!-- Codemirror ends here -->
+
+</head>
+<body>
+   <div class='reveal'>
+       <div class='slides'>
+	      <section>
+		     <h1> Test Slide </h1>
+			 <h4> This makes presentations easier </h4>
+		  </section>
+	      <section>
+		     <h1> Thanks </h1>
+			 <div> This makes presentations easier </div>
+		  </section>
+	   </div>
+
+       <!-- The navigational controls UI -->
+       <!-- <aside class="controls">
+           <a class="left" href="#">&#x25C4;</a>
+           <a class="right" href="#">&#x25BA;</a>
+           <a class="up" href="#">&#x25B2;</a>
+           <a class="down" href="#">&#x25BC;</a>
+       </aside>
+       -->
+       <!-- Presentation progress bar -->
+       <div class="progress"><span></span></div>
+
+   </div>
+
+   <script src="../lib/js/head.min.js"></script>        
+   <script src="../js/reveal.min.js"></script>
+   <script>
+       // Full list of configuration options available here:
+       // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+           controls: true,
+           mouseWheel: false,
+           progress: true,
+           history: true,
+           
+           transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+   
+           // Optional libraries used to extend on reveal.js                
+           dependencies: [
+                  { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } }
+           ]
+       });
+   </script>
+
+</body>
+</html>

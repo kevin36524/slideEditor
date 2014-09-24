@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- native Generic stuff -->
+  <meta charset="utf-8">
+  
+  <title>Test Presentation</title>
+  
+  <meta name="description" content="Just making a bare minimal presentation">
+  <meta name="author" content="Kevin Patel">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/theme/default.css">
+
+  <script>
+      // If the query includes 'print-pdf' we'll use the PDF print sheet
+      document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf':'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+  <!-- generic stuff ends -->
+  
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.6.0/build/widget-base/assets/skins/sam/widget-base.css&3.6.0/build/cssbutton/cssbutton-min.css&3.6.0/build/widget-modality/assets/skins/sam/widget-modality.css&3.6.0/build/widget-stack/assets/skins/sam/widget-stack.css&3.6.0/build/panel/assets/skins/sam/panel.css">
+
+
+<!-- JS -->
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/yui-base/yui-base-min.js&3.6.0/build/oop/oop-min.js&3.6.0/build/event-custom-base/event-custom-base-min.js&3.6.0/build/features/features-min.js&3.6.0/build/dom-core/dom-core-min.js&3.6.0/build/dom-base/dom-base-min.js&3.6.0/build/selector-native/selector-native-min.js&3.6.0/build/selector/selector-min.js&3.6.0/build/node-core/node-core-min.js&3.6.0/build/node-base/node-base-min.js&3.6.0/build/event-base/event-base-min.js&3.6.0/build/attribute-core/attribute-core-min.js&3.6.0/build/event-custom-complex/event-custom-complex-min.js&3.6.0/build/attribute-events/attribute-events-min.js&3.6.0/build/attribute-extras/attribute-extras-min.js&3.6.0/build/attribute-base/attribute-base-min.js&3.6.0/build/attribute-complex/attribute-complex-min.js&3.6.0/build/base-core/base-core-min.js&3.6.0/build/base-base/base-base-min.js&3.6.0/build/pluginhost-base/pluginhost-base-min.js&3.6.0/build/pluginhost-config/pluginhost-config-min.js&3.6.0/build/base-pluginhost/base-pluginhost-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/classnamemanager/classnamemanager-min.js&3.6.0/build/event-synthetic/event-synthetic-min.js&3.6.0/build/event-focus/event-focus-min.js&3.6.0/build/dom-style/dom-style-min.js&3.6.0/build/node-style/node-style-min.js&3.6.0/build/widget-base/widget-base-min.js&3.6.0/build/widget-htmlparser/widget-htmlparser-min.js&3.6.0/build/widget-skin/widget-skin-min.js&3.6.0/build/event-delegate/event-delegate-min.js&3.6.0/build/node-event-delegate/node-event-delegate-min.js&3.6.0/build/widget-uievents/widget-uievents-min.js&3.6.0/build/base-build/base-build-min.js&3.6.0/build/event-key/event-key-min.js&3.6.0/build/event-outside/event-outside-min.js&3.6.0/build/widget-autohide/widget-autohide-min.js&3.6.0/build/button-core/button-core-min.js&3.6.0/build/node-pluginhost/node-pluginhost-min.js&3.6.0/build/button-plugin/button-plugin-min.js&3.6.0/build/widget-stdmod/widget-stdmod-min.js&3.6.0/build/widget-buttons/widget-buttons-min.js&3.6.0/build/widget-modality/widget-modality-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?3.6.0/build/dom-screen/dom-screen-min.js&3.6.0/build/node-screen/node-screen-min.js&3.6.0/build/widget-position/widget-position-min.js&3.6.0/build/widget-position-align/widget-position-align-min.js&3.6.0/build/widget-position-constrain/widget-position-constrain-min.js&3.6.0/build/widget-stack/widget-stack-min.js&3.6.0/build/panel/panel-min.js&3.6.0/build/yui-throttle/yui-throttle-min.js&3.6.0/build/dd-ddm-base/dd-ddm-base-min.js&3.6.0/build/dd-drag/dd-drag-min.js&3.6.0/build/dd-plugin/dd-plugin-min.js&3.6.0/build/event-resize/event-resize-min.js&3.6.0/build/dd-ddm/dd-ddm-min.js&3.6.0/build/dd-ddm-drop/dd-ddm-drop-min.js&3.6.0/build/dd-drop/dd-drop-min.js&3.6.0/build/dd-drop-plugin/dd-drop-plugin-min.js"></script>
+  <script src='../plugin/editor/editor-main.js'> </script>
+  <link rel='stylesheet' type='text/css' href='../plugin/editor/editor.css'> </link>
+
+  <!-- Codemirror starts here -->
+    <link rel="stylesheet" href="codemirror2/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror2/lib/slideEditor.css">
+    <link rel="stylesheet" href="codemirror2/theme/night.css">
+    <script src="codemirror2/lib/codemirror.js"></script>
+    <script src="codemirror2/lib/slideEditor.js"></script>
+    <script src="codemirror2/mode/javascript/javascript.js"></script>
+    <script src="codemirror2/mode/css/css.js"></script>
+    <script src="codemirror2/mode/xml/xml.js"></script>
+    <script src="codemirror2/mode/htmlmixed/htmlmixed.js"></script>
+  <!-- Codemirror ends here -->
+
+</head>
+<body>
+   <div class='reveal'>
+       <div class='slides'>
+	      <section>
+		     <h1> Test Slide </h1>
+			 <h4> This makes presentations easier </h4>		  
+			 </section>
+			 
+	      <section>
+		     <iframe src='http://autobots.in/slideEditor/mypres/neon.html' style="height:300px"> </iframe>
+		     
+			 <p> We are still working !!! Please wait and come back later :) </p>
+		  </section>
+		  
+		  				<section data-state="customevent">
+				    <h2> CodeMirror example </h2>
+<textarea id="ed2" >
+<html>
+  <head>
+  </head>
+  <body>
+	<script>
+	   document.writeln('hello');
+	</script>
+  </body>
+</html>
+</textarea> 
+           <button id='run2'> Run </button>
+                    
+                    <iframe id="out2" src="" frameborder="no">
+                    </iframe>
+                    
+                    <script>
+                    
+					</script>
+				</section>
+
+	   </div>
+
+       <!-- The navigational controls UI -->
+       <aside class="controls">
+           <a class="left" href="#">&#x25C4;</a>
+           <a class="right" href="#">&#x25BA;</a>
+           <a class="up" href="#">&#x25B2;</a>
+           <a class="down" href="#">&#x25BC;</a>
+       </aside>
+      
+       <!-- Presentation progress bar -->
+       <div class="progress"><span></span></div>
+
+   </div>
+
+   <script src="../lib/js/head.min.js"></script>        
+   <script src="../js/reveal.min.js"></script>
+   <script>
+       // Full list of configuration options available here:
+       // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+           controls: true,
+           mouseWheel: false,
+           progress: true,
+           history: true,
+           
+           transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+   
+           // Optional libraries used to extend on reveal.js                
+           dependencies: [
+                  { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } }
+           ]
+       });
+       
+       Reveal.addEventListener( 'customevent', (function(){
+           var renderedOnce = false;
+           var retFn = function(){
+             if (!renderedOnce){
+               YUI().use('slideEditor', function(Y){
+                 Y.activateSlideEditor("#ed2", "#out2", "#run2"); 
+               });
+               renderedOnce = true;
+             }
+           };
+           return retFn;
+         })()
+       );
+   </script>
+
+</body>
+</html>

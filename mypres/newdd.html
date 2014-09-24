@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+<style>
+   section{
+	 display: inline-block;
+	 position: relative;
+     border: 1px solid black;
+	 background-color: blue;
+	 border-radius: 15px;
+	 height: 100px;
+	 width: 100px;
+   }
+   section.vertical{
+     display:block;
+   }
+   section.yui3-dd-drop-over {
+      background-color: #ccc;
+   }
+</style>
+</head>
+<body>
+
+<slides>
+
+   <section id='section2'>
+      Section2
+   </section>
+      
+   <section id='section3'>
+      <section class='vertical' id='section3'>
+         Section3-a
+      </section>
+      <section class='vertical' id='section3'>
+         Section3-b
+      </section>
+   </section>
+      
+   <section id='section1'>
+      Section1
+   </section>
+      
+</slides>
+
+<script>
+YUI().use('node', 'dd-delegate', 'dd-drop-plugin', function(Y) {
+    var dragDel = new Y.DD.Delegate({
+	   container: 'slides',
+	   nodes: 'section'
+	});
+
+	var dropArr = Y.all('section').plug(Y.Plugin.Drop).get('nodes');
+
+	for (var i in dropArr) {
+       (function(){
+          var k = i;
+          dropArr[k].drop.on('drop:hit',function(e){
+             var slideDragged = e.drag.get('node');
+             dropArr[k].insert(slideDragged,'after');
+       	  slideDragged.setStyles({top:0, left:0});
+             console.log('Something dropped on me');
+          });
+       })();
+	}
+
+});
+</script>
+
+</body>
+
+</html>

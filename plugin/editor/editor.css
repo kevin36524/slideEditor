@@ -1,0 +1,45 @@
+#toolbar {
+   display: none;
+   position: absolute;
+   background-color: #404040;
+   border-radius: 15px;
+   top: 20px;
+   left: 20px;
+}
+
+#toolbar button {
+   float: left;
+   margin: 7px;
+}
+
+.yui3-panel-content {
+   font-size: 20px;
+   background-color: black;
+   border-radius: 15px;
+}
+
+.yui3-widget-hd div{
+  margin: 0px auto 6px;
+  width: 200px;
+}
+ 
+.yui3-widget-bd textarea{
+   width: 100%;
+   height: 300px;
+}
+
+.yui3-panel .yui3-widget-ft span.yui3-widget-buttons{
+   display: block;
+}
+
+.yui3-button{
+   font-size: 75%;
+   margin: 0px auto;
+   width: 4em;
+   padding: 0.3em;
+   display: block;
+}
+
+.drop {
+ display: none;
+}
